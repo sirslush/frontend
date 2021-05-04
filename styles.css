@@ -1,0 +1,95 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --p-color: hsla(0, 0%, 100%, 0.75);
+  --lightgrey: hsl(0, 0%, 95%);
+
+}
+
+
+body {
+  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Lexend', sans-serif;
+  font-size: 15px;
+  padding: 5%;
+
+}
+p {
+  color: var(--p-color);
+  margin: 15px 0px 60px 0px;
+}
+h1 {
+  color: var(--lightgrey);
+}
+.button {
+  background-color: var(--lightgrey);
+  border-radius: 25px;
+  padding: 8px 30px;
+  font-weight: bold;
+  border: none;
+  transition-duration: 0.4s;
+
+}
+.button:hover {
+    color: var(--lightgrey);
+}
+}
+.panels {
+  border-radius: 25%;
+}
+.panel  {
+  float: left;
+  width: 33.3%;
+  text-align: left;
+  min-width: 300px;
+  height: auto;
+}
+.panel > div {
+  padding: 50px;
+}
+.panel-suv  {
+  background-color: var(--Dark-cyan);
+}
+.panel-suv > button  {
+  color: var(--Dark-cyan);
+}
+
+.panel-sedan  {
+  background-color: var(--Bright-orange);
+}
+.panel-sedan > button {
+  color: var(--Bright-orange);
+}
+.panel-luxury  {
+  background-color: var(--Very-dark-cyan);
+}
+.panel-luxury > button {
+  color: var(--Very-dark-cyan);
+}
+@media screen and (max-width: 500px) {
+  .panel {
+    width: 100%;
+  }
+  .panel-sedan  {
+    border-radius: 15px 15px 0px 0px;
+  }
+  .panel-luxury  {
+    border-radius: 0px 0px 15px 15px;
+  }
+
+}
+
+@media screen and (min-width: 501px) {
+  .panels {
+    display: inline-block;
+    min-width: 1000px;
+  }
+  .panel-sedan  {
+    border-radius: 15px 0px 0px 15px;
+  }
+  .panel-luxury  {
+    border-radius: 0px 15px 15px 0px;
+  }
+
+}
