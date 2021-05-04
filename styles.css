@@ -34,12 +34,13 @@ h1 {
 .button:hover {
     color: var(--lightgrey);
 }
-}
+
 .panels {
-  border-radius: 25%;
+  display: flex;
+  flex-flow: row;
 }
 .panel  {
-  float: left;
+  flex: auto;
   width: 33.3%;
   text-align: left;
   min-width: 300px;
@@ -68,6 +69,9 @@ h1 {
   color: var(--Very-dark-cyan);
 }
 @media screen and (max-width: 500px) {
+  .panels {
+    flex-flow: column;
+  }
   .panel {
     width: 100%;
   }
@@ -82,8 +86,6 @@ h1 {
 
 @media screen and (min-width: 501px) {
   .panels {
-    display: inline-block;
-    min-width: 1000px;
   }
   .panel-sedan  {
     border-radius: 15px 0px 0px 15px;
